@@ -1676,7 +1676,7 @@ problem_mapping = {
                 "total": 308
             },
             "Python: smallest_nonconstructible_value.py": {
-                "passed": 0,
+                "passed": 308,
                 "total": 308
             }
         },
@@ -2296,7 +2296,7 @@ problem_mapping = {
                 "total": 102
             },
             "Python: pretty_printing.py": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             }
         },
