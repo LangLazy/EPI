@@ -10,6 +10,7 @@ NUM_PEGS = 3
 
 def compute_tower_hanoi(num_rings: int) -> List[List[int]]:
     # TODO - you fill in here.
+    
     return []
 
 
