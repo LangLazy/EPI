@@ -1,3 +1,4 @@
+from collections import deque
 import functools
 
 from test_framework import generic_test
@@ -13,7 +14,21 @@ class BinaryTreeNode:
 
 
 def construct_right_sibling(tree: BinaryTreeNode) -> None:
-    # TODO - you fill in here.
+    if not tree or not tree.left:
+        return 
+    q = deque()
+    q.append(tree.left)
+    q.append(tree.right)
+    while q:
+        startLen = len(q)
+        for i in range(startLen):
+            cur = q.popleft()
+            if i != startLen -1:
+                cur.next = q[0]
+            if cur.left:
+                q.append(cur.left)
+            if cur.right:
+                q.append(cur.right)
     return
 
 
