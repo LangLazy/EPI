@@ -8,7 +8,52 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def overlapping_lists(l0: ListNode, l1: ListNode) -> Optional[ListNode]:
-    # TODO - you fill in here.
+    def cycLen(l):
+        fast, slow = l, l
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast is slow:
+                break
+        if not (fast and fast.next): #No Loop
+            counter = 0
+            while l:
+                counter += 1
+                l = l.next
+            return (counter,0)
+        else: #Has Loop
+            slow = l
+            count = 0
+            while slow is not fast:
+                count += 1
+                slow = slow.next
+                fast = fast.next
+            slow = slow.next
+            cycle = 1
+            while slow is not fast:
+                slow = slow.next
+                cycle +=1
+            return (count, cycle)
+    p0 = cycLen(l0)
+    p1 = cycLen(l1)
+    if p0[1] != p1[1]:
+        return None
+    c0 = l0
+    c1 = l1
+    if p0[0] < p1[0]:
+        l0,l1 = l1,l0
+        p0,p1 = p1,p0
+        c0,c1 = c1,c0
+    for _ in range(p0[0]-p1[0]):
+        c0 = c0.next
+    for _ in range(p1[0]):
+        if c0 is c1:
+            return c0
+        c0,c1 = c0.next, c1.next
+    for _ in range(p0[1]):
+        if c1 is c0:
+            return c0
+        c1 = c1.next
     return None
 
 
