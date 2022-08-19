@@ -1916,7 +1916,7 @@ problem_mapping = {
                 "total": 958
             },
             "Python: descendant_and_ancestor_in_bst.py": {
-                "passed": 0,
+                "passed": 958,
                 "total": 958
             }
         },
@@ -2254,7 +2254,7 @@ problem_mapping = {
                 "total": 101
             },
             "Python: minimum_weight_path_in_a_triangle.py": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             }
         },
