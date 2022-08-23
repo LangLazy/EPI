@@ -16,7 +16,11 @@ class Team:
     # Checks if team0 can be placed in front of team1.
     @staticmethod
     def valid_placement_exists(team0: 'Team', team1: 'Team') -> bool:
-        # TODO - you fill in here.
+        zp = sorted(team0._players)
+        op = sorted(team1._players)
+        for i in range(len(zp)-1,-1,-1):
+            if op[i] <= zp[i]:
+                return False
         return True
 
 
