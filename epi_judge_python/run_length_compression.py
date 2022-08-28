@@ -3,13 +3,45 @@ from test_framework.test_failure import TestFailure
 
 
 def decoding(s: str) -> str:
-    # TODO - you fill in here.
-    return ''
+    def readNum(pos):
+        end = pos #The first non digit
+        while s[end].isdigit():
+            end += 1
+        cur = 0
+        po = 0
+        for i in range(end-1,pos-1,-1):
+            cur += int(s[i]) * (10 ** po)
+            po += 1
+        return (cur, end)
+    pos = 0
+    ans = []
+    while pos < len(s):
+        num, pos = readNum(pos)
+        for _ in range(num):
+            ans.append(s[pos])
+        pos += 1
+    b = "".join(ans)
+    print(type(b))
+    return "ooooooo"
 
 
 def encoding(s: str) -> str:
-    # TODO - you fill in here.
-    return ''
+    if not s:
+        return ""
+    ans = []
+    curChar = s[0]
+    curCount = 1
+    for i in range(1,len(s)+1):
+        if i == len(s) or s[i] != curChar:
+            ans.append(str(curCount))
+            ans.append(curChar)
+        if s[i] != curChar:
+            curChar = s[i]
+            curCount = 1
+        elif s[i] == curChar:
+            curCount += 1
+    p = ''.join(ans)
+    return p
 
 
 def rle_tester(encoded, decoded):

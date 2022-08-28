@@ -476,7 +476,7 @@ problem_mapping = {
                 "total": 10000
             },
             "Python: is_string_palindromic.py": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             }
         },
@@ -518,7 +518,7 @@ problem_mapping = {
                 "total": 10000
             },
             "Python: spreadsheet_encoding.py": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             }
         },
@@ -546,7 +546,7 @@ problem_mapping = {
                 "total": 305
             },
             "Python: is_string_palindromic_punctuation.py": {
-                "passed": 0,
+                "passed": 305,
                 "total": 305
             }
         },
@@ -602,7 +602,7 @@ problem_mapping = {
                 "total": 10008
             },
             "Python: valid_ip_addresses.py": {
-                "passed": 0,
+                "passed": 10008,
                 "total": 10008
             }
         },
@@ -616,7 +616,7 @@ problem_mapping = {
                 "total": 500
             },
             "Python: snake_string.py": {
-                "passed": 0,
+                "passed": 500,
                 "total": 500
             }
         },
@@ -952,7 +952,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: tree_level_order.py": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             }
         },
@@ -1192,7 +1192,7 @@ problem_mapping = {
                 "total": 3852
             },
             "Python: tree_exterior.py": {
-                "passed": 0,
+                "passed": 3,
                 "total": 3852
             }
         },
@@ -1576,7 +1576,7 @@ problem_mapping = {
                 "total": 203
             },
             "Python: longest_contained_interval.py": {
-                "passed": 0,
+                "passed": 203,
                 "total": 203
             }
         },
@@ -1590,7 +1590,7 @@ problem_mapping = {
                 "total": 171
             },
             "Python: string_decompositions_into_dictionary_words.py": {
-                "passed": 0,
+                "passed": 171,
                 "total": 171
             }
         },
@@ -1774,7 +1774,7 @@ problem_mapping = {
                 "total": 1005
             },
             "Python: find_salary_threshold.py": {
-                "passed": 0,
+                "passed": 1005,
                 "total": 1005
             }
         }
@@ -2170,7 +2170,7 @@ problem_mapping = {
                 "total": 100
             },
             "Python: levenshtein_distance.py": {
-                "passed": 0,
+                "passed": 100,
                 "total": 100
             }
         },
@@ -2310,7 +2310,7 @@ problem_mapping = {
                 "total": 200
             },
             "Python: longest_nondecreasing_subsequence.py": {
-                "passed": 0,
+                "passed": 200,
                 "total": 200
             }
         }
@@ -2394,7 +2394,7 @@ problem_mapping = {
                 "total": 1008
             },
             "Python: three_sum.py": {
-                "passed": 0,
+                "passed": 1008,
                 "total": 1008
             }
         },

@@ -4,8 +4,19 @@ from test_framework import generic_test
 
 
 def longest_contained_range(A: List[int]) -> int:
-    # TODO - you fill in here.
-    return 0
+    s = set()
+    for a in A:
+        s.add(a)
+    maxV = 0
+    for k in s:
+        if k - 1 in s:
+            continue
+        else:
+            cur = k
+            while cur in s:
+                cur += 1
+            maxV = max(maxV, cur - k)
+    return maxV
 
 
 if __name__ == '__main__':
