@@ -4,8 +4,16 @@ from test_framework import generic_test
 
 
 def longest_subarray_with_distinct_entries(A: List[int]) -> int:
-    # TODO - you fill in here.
-    return 0
+    seen = {}
+    startPos = 0
+    maxLen = 0
+    for pos, a in enumerate(A):
+        if a in seen:
+            if seen[a] >= startPos:
+                startPos = seen[a] + 1
+        seen[a] = pos
+        maxLen = max(maxLen, pos - startPos + 1)
+    return maxLen
 
 
 if __name__ == '__main__':

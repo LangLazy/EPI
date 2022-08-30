@@ -2,8 +2,22 @@ from test_framework import generic_test
 
 
 def shortest_equivalent_path(path: str) -> str:
-    # TODO - you fill in here.
-    return ''
+    sep = path.split('/')
+    start = ""
+    if path[0] =='/':
+        start = '/'
+    stk = []
+    for p in sep:
+        if p == '' or p == '.':
+            continue
+        elif p == '..':
+            if len(stk) == 0 or stk[-1] == "..":
+                stk.append("..")
+            else:
+                stk.pop()            
+        else:
+            stk.append(p)
+    return start + '/'.join(stk)
 
 
 if __name__ == '__main__':
