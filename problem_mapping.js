@@ -1534,7 +1534,7 @@ problem_mapping = {
                 "total": 904
             },
             "Python: smallest_subarray_covering_set.py": {
-                "passed": 0,
+                "passed": 904,
                 "total": 904
             }
         },
@@ -2422,7 +2422,7 @@ problem_mapping = {
                 "total": 202
             },
             "Python: refueling_schedule.py": {
-                "passed": 0,
+                "passed": 202,
                 "total": 202
             }
         },
@@ -2636,7 +2636,7 @@ problem_mapping = {
                 "total": 100
             },
             "Python: longest_increasing_subarray.py": {
-                "passed": 0,
+                "passed": 100,
                 "total": 100
             }
         },
