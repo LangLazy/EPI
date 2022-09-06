@@ -4,7 +4,19 @@ from test_framework import generic_test
 
 
 def rotate_matrix(square_matrix: List[List[int]]) -> None:
-    # TODO - you fill in here.
+    def rotateLayer(offset:int):
+        len(square_matrix) - 2*offset - 1
+        for i in range(len(square_matrix) - 2*offset - 1):
+            a = square_matrix[offset][offset + i]
+            b = square_matrix[offset+i][len(square_matrix) - offset -1 ]
+            c = square_matrix[len(square_matrix) - offset -1][len(square_matrix) - offset -1-i]
+            d = square_matrix[len(square_matrix) - offset -1 - i][offset]
+            square_matrix[offset][offset + i] = d
+            square_matrix[offset+i][len(square_matrix) - offset -1 ] = a
+            square_matrix[len(square_matrix) - offset -1][len(square_matrix) - offset -1-i] = b
+            square_matrix[len(square_matrix) - offset -1 - i][offset] = c
+    for i in range((len(square_matrix)+1)//2):
+        rotateLayer(i)
     return
 
 
