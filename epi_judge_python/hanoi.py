@@ -7,11 +7,40 @@ from test_framework.test_utils import enable_executor_hook
 
 NUM_PEGS = 3
 
-
+#Recursion is magic!
 def compute_tower_hanoi(num_rings: int) -> List[List[int]]:
-    # TODO - you fill in here.
-    
-    return []
+    def recur(n, start, unused, end)-> List[List[int]]:
+        if n == 0:
+            return []
+        elif n == 1:
+            return [[start, end]]
+        else:
+            partial = recur(n-1, start, end, unused)
+            partial += [[start, end]]
+            partial += recur(n-1, unused, start, end)
+            return partial
+    return recur(num_rings, 0,2,1)
+    # def recur(n, start, end) -> List[List[int]]:
+    #     if n == 0:
+    #         return
+    #     elif n == 1:
+    #         return [[start, end]]
+    #     else:
+    #         unused = 0
+    #         if start != 1 and end != 1:
+    #             unused = 1
+    #         elif start !=2 and end != 2:
+    #             unused = 2
+    #         curAns = recur(n-1, start, unused)
+    #         curAns.append([start, end])
+    #         for i in range(1, n-1):
+    #             pans = recur(n-i-1, unused, start)
+    #             curAns += pans
+    #             curAns.append([unused, end])
+    #             unused, start = start, unused
+    #         curAns.append([unused, end])
+    #         return curAns
+    # return recur(num_rings, 0, 1)
 
 
 @enable_executor_hook

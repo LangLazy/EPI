@@ -2,8 +2,12 @@ from test_framework import generic_test
 
 
 def ss_decode_col_id(col: str) -> int:
-    # TODO - you fill in here.
-    return 0
+    po = 0
+    ans = 0
+    for i in range(len(col)-1,-1,-1):
+        ans += (ord(col[i]) - ord('A') +1 ) * (26 ** po)
+        po += 1
+    return ans
 
 
 if __name__ == '__main__':

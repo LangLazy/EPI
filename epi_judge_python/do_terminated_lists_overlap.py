@@ -1,3 +1,4 @@
+from cgitb import small
 import functools
 
 from list_node import ListNode
@@ -7,9 +8,26 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def overlapping_no_cycle_lists(l0: ListNode, l1: ListNode) -> ListNode:
-    # TODO - you fill in here.
-    return ListNode()
-
+    def lent(list: ListNode)->int:
+        count = 0
+        while list:
+            count += 1
+            list = list.next
+        return count
+    largeLen = lent(l0)
+    smallLen = lent(l1)
+    larger, smaller = l0,l1
+    if smallLen > largeLen:
+        larger, smaller = smaller, larger
+        largeLen, smallLen = smallLen, largeLen
+    offset = largeLen - smallLen
+    for _ in range(offset):
+        larger = larger.next
+    while larger and smaller:
+        if larger == smaller:
+            return larger
+        larger, smaller = larger.next, smaller.next
+    return None
 
 @enable_executor_hook
 def overlapping_no_cycle_lists_wrapper(executor, l0, l1, common):
