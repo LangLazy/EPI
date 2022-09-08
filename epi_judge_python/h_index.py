@@ -2,9 +2,10 @@ from typing import List
 
 from test_framework import generic_test
 
-
+#h index is max val of h st the person has at least h papers each with at least h citations
 def h_index(citations: List[int]) -> int:
-    # TODO - you fill in here.
+    citations.sort()
+    
     return 0
 
 
